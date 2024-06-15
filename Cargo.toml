@@ -1,0 +1,28 @@
+[package]
+name = "tutor-nodb"
+version = "0.1.0"
+edition = "2021"
+authors=["peshwar9"]
+default-run = "tutor-service"
+resolver = "2"
+
+
+[dependencies]
+actix-web = "4.7.0"
+actix-rt = "2.10.0" 
+
+# Data serialization library
+serde = { version = "1.0.203", features = ["derive"] }
+
+# Other utilities
+chrono = {version = "0.4.38", features = ["serde"]}
+
+# Cargo compiles all files in src/bin into executables with the 
+# same name automatically. You need to specify names and paths 
+# only if you don't follow this convention.
+
+[[bin]]
+name = "basic-server"
+
+[[bin]]
+name = "tutor-service"
